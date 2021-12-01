@@ -6,4 +6,10 @@ resource "random_string" "naming" {
 
 locals {
   prefix = "${var.prefix}${random_string.naming.result}"
+  tags = merge(
+    var.additional_tags,
+    {
+      provisioned_by = "Terraform"
+    }
+  )
 }

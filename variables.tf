@@ -5,12 +5,29 @@ variable "databricks_account_id" {}
 variable "databricks_account_username" {}
 variable "databricks_account_password" {}
 
+variable "workspace_vpc_endpoint_id" {}
+variable "relay_vpc_endpoint_id" {}
+
 variable "tags" {
   default = {}
 }
 
-variable "cidr_block" {
-  default = "10.4.0.0/16"
+variable "vpc_id" {
+  type = string
+}
+
+variable "public_subnet_cidrs" {
+  type        = list(string)
+  description = "Public subnets' CIDR blocks."
+}
+
+variable "private_subnet_cidrs" {
+  type        = list(string)
+  description = "Private subnets' CIDR blocks."
+}
+
+variable "igw_id" {
+  type = string
 }
 
 variable "region" {
@@ -19,4 +36,10 @@ variable "region" {
 
 variable "prefix" {
   type = string
+}
+
+variable "additional_tags" {
+  type        = map(string)
+  description = "Additional resource tags. Do not include the Name key."
+  default     = {}
 }
