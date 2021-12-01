@@ -15,9 +15,9 @@ Below is an example `terraform.tfvars` file that you can use in your deployments
 aws_access_key = "AKSLPA3QD2Z74EXAMPLE"
 aws_secret_key = "sDXlK+uifTbRFRqxP7AFGsLy6K19pEOa7EXAMPLE"
 
-databricks_account_id       = "6a32ce7c-4168-4b2a-aa86-3422e2c22ea1"
-databricks_account_username = "sravanthi.vallaboju@fujitsu.com"
-databricks_account_password = "Sravanthi123#"
+databricks_account_id = "<databricks_account_id>"
+databricks_account_username = "<databricks_email_id>"
+databricks_account_password = "<databricks_user_password>"
 
 vpc_id = "vpc-01ef400f0fexample"
 igw_id = "igw-0c8e654e88example"
